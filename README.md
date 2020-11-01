@@ -7,8 +7,12 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+This dataset contains data about marketing campaigns based on phone calls of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit.
+
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+The best perfoming model was Voting Ensemble model having accuracy 91.65 % followed by MaxAbsScaler, LightGBM having accuracy of 91.39%. The best performing model was derived using Azure AutoML.
+The same dataset was also used to train Logistic regression model and Parameters were tuned using Azure Hyperdrive which resulted in 91.32% accuracy.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
