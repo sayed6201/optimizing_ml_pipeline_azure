@@ -7,7 +7,7 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
-This dataset contains data about marketing campaigns based on phone calls of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit.
+This dataset contains data about marketing campaigns based on phone calls of a Portuguese banking institution. We seek to predict to predict if the client will subscribe a term deposit.
 
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
@@ -16,8 +16,15 @@ The same dataset was also used to train Logistic regression model and Parameters
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
-
+### The pipeline architecture
+* The tabular dataset is created using TabularDatasetFactory from the the link
+* The dataset is cleaned using python script. cleaning includes encoding categorical values, representing some non numeric values into numeric format 
+* The data is splitted into test and train set. the test:train ration is 20:80
+* The data is used to train LogisticRegression from sklearn.linear_model. SKLearn estimator from azureml.train.sklearn is used to run the trainnig script
+* The model LogisticRegression takes two hyperparameters inverse of regularization strength (--C) and Max iterations (--max_iter), Using Azure Hyper Drive this paremeters are tuned to get model with best accuracy.
 **What are the benefits of the parameter sampler you chose?**
+### Benefits of the parameter sampler
+
 
 **What are the benefits of the early stopping policy you chose?**
 
