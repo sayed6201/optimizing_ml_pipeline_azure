@@ -36,6 +36,8 @@ I opted Random sampling method.
 
 
 ### Benefits of choosing Bandit Policy for early stopping
+* The early stopping policies automatically terminate poorly performing runs and improves computational efficiency.
+* Bandit policy is based on slack factor and evaluation interval. I have defined slackfactor = 0.1, The policy terminates runs where the primary metric is not within the specified slack factor compared to the best performing run.
 
 
 ## AutoML
