@@ -24,7 +24,12 @@ The same dataset was also used to train Logistic regression model and Parameters
 * The model LogisticRegression takes two hyperparameters inverse of regularization strength (--C) and Max iterations (--max_iter), Using Azure Hyper Drive this paremeters are tuned to get model with best accuracy.
 **What are the benefits of the parameter sampler you chose?**
 ### Benefits of the parameter sampler
-
+* Parameter sampling method helps us to choose proper hyperparameter for our model, in Azure Machine Learning supports the following methods:
+        * Random sampling
+        * Grid sampling
+        * Bayesian sampling
+* Random sampling supports discrete and continuous hyperparameters. It supports early termination of low-performance runs. Some users do an initial search with random sampling and then refine the search space to improve results.
+In random sampling, hyperparameter values are randomly selected from the defined search space.
 
 **What are the benefits of the early stopping policy you chose?**
 
