@@ -21,6 +21,8 @@ The same dataset was also used to train Logistic regression model and Parameters
 * The data is used to train LogisticRegression from sklearn.linear_model. SKLearn estimator from azureml.train.sklearn is used to run the trainnig script
 * The model LogisticRegression takes two hyperparameters inverse of regularization strength (--C) and Max iterations (--max_iter), Using Azure Hyper Drive this paremeters are tuned to get model with best accuracy.
 
+Screenshot shows HyperDrive run completed successfully: 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/hyper_drive_run_completed.png "hyerdrive run completed")
 
 ### Benefits of choosing Random Parameter Sampler
 * Parameter sampling method helps us to choose proper hyperparameter value for our model, in Azure Machine Learning supports the following methods:
