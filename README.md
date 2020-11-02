@@ -21,8 +21,13 @@ The same dataset was also used to train Logistic regression model and Parameters
 * The data is used to train LogisticRegression from sklearn.linear_model. SKLearn estimator from azureml.train.sklearn is used to run the trainnig script
 * The model LogisticRegression takes two hyperparameters inverse of regularization strength (--C) and Max iterations (--max_iter), Using Azure Hyper Drive this paremeters are tuned to get model with best accuracy.
 
-Screenshot shows HyperDrive run completed successfully: 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/hyper_drive_run_completed.png "hyerdrive run completed")
+Screenshot shows HyperDrive Model accuracy in descending order after Run completion: 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/hyperdrive_child_run_completed.png "hyerdrive run completed")
+
+Screenshot shows HyperDrive best model run : 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/hyperdrive_best_model.png "hyerdrive best model run completed")
+
+
 
 ### Benefits of choosing Random Parameter Sampler
 * Parameter sampling method helps us to choose proper hyperparameter value for our model, in Azure Machine Learning supports the following methods:
@@ -54,13 +59,28 @@ I opted Random sampling method.
    * label_column_name : label of column that will be predicted.
    * max_cores_per_iteration: Refers to The maximum number of threads to be used for training iteration.I'm specyfying -1, which refers to use all the possible cores per iteration per child-run.
    * experiment_timeout_minutes : i specified 30 minutes which means maximum amount of time that all iterations combined can take before the experiment terminates.
-[pic]
+   
+Screenshot shows AutoML configuration code from notebook: 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/automl_config.PNG "automl configuration")
+
+
 
 * Both AutoML and HyperDrive was configured with same dataset and same primary metric. AutoML was able to train model having the best accuracy. the screenshot below shows models with best accuracy in descending order. VotingEnsemble model outperformed all other models, scoring accuracy of 91.58 %.
-[pic]
+
+
+Screenshot different model trained by AutoML with accuray : 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/all_automl_models.png "automl best models")
+
+Screenshot shows Best AutoML model run detail: 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/best_automl_model.png "automl best model")
+
 
 * From the trained model explanation we can understand what features are having greater impact on decision making, from the screenshot below we can see that employment variation rate, month, number of employees , duration, pdays etc has higher importance in prediction
-[pic]
+
+
+Screenshot taken from AutoML model explanation showing some important features: 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/automl_explanation_global_importance.png "automl global importance")
+
 
 ## Pipeline comparison
 
