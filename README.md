@@ -88,6 +88,9 @@ Screenshot taken from AutoML model explanation showing some important features:
 
 * Though the difference of accuracy for model trained with AutoML and HyperDrive was little, Azure AutoML made it easy to train multiple models in a short time, with hyperdrive it would have required to create different pipeline for different models. 
 
+Screenshot shows AutoML and Hyperdrive run completed: 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/all_runs_exp_completed.png "completed")
+
 
 ## Future work
 
@@ -96,3 +99,8 @@ I used cleaned data to train AutoML models, i would like to see if AutoML perfor
 
 ## Proof of cluster clean up
 The image shows cluster getting deleted
+
+Screenshot shows AutoML and Hyperdrive run completed: 
+![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/deleting_cluster.png "cluster deleted")
+
+
