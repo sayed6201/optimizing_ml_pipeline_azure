@@ -54,18 +54,23 @@ I opted Random sampling method.
    * experiment_timeout_minutes : i specified 30 minutes which means maximum amount of time that all iterations combined can take before the experiment terminates.
 [pic]
 
-* Both AutoML and HyperDrive was configured with same dataset and same primary metric. AutoML was able to train model having the best accuracy. the screenshot below shows models with best accuracy in descending order. VotingEnsemble model outperformed all other models, scoring accuracy of 91.56 %.
+* Both AutoML and HyperDrive was configured with same dataset and same primary metric. AutoML was able to train model having the best accuracy. the screenshot below shows models with best accuracy in descending order. VotingEnsemble model outperformed all other models, scoring accuracy of 91.58 %.
 [pic]
 
 * From the trained model explanation we can understand what features are having greater impact on decision making, from the screenshot below we can see that employment variation rate, month, number of employees , duration, pdays etc has higher importance in prediction
 [pic]
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+
+* The model trained through Azure AutoML outperformed the accuracy of Logistic regression model that was tuned using Azure HyperDrive. In AutoML some of top best models in desceinding order were VotingEnsemble, MaxAbsScaler,LightGBM,StandardScalerWrapper,XGBoostClassifier. VotingEnsemble had the best accuracy score of 91.58 %. The Logistic regression tuned with HyperDrive had the accuracy of 91.32%.
+
+* Though the difference of accuracy for model trained with AutoML and HyperDrive was little, Azure AutoML made it easy to train multiple models in a short time, with hyperdrive it would have required to create different pipeline for different models. 
+
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
+
+I used cleaned data to train AutoML models, i would like to see if AutoML perform better than the current model when featurization it set to true. besides the dataset is imbalanced so i would like to train AutoML and HyperDrive models using F1-score, AUC and other primary metrics.
+
 
 ## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+The image shows cluster getting deleted
