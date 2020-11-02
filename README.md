@@ -100,7 +100,7 @@ I used cleaned data to train AutoML models, i would like to see if AutoML perfor
 ## Proof of cluster clean up
 The image shows cluster getting deleted
 
-Screenshot shows AutoML and Hyperdrive run completed: 
+Screenshot showing cluster getting deleted: 
 ![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/deleting_cluster.png "cluster deleted")
 
 
