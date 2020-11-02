@@ -15,7 +15,7 @@ The same dataset was also used to train Logistic regression model and Parameters
 ## Scikit-learn Pipeline
 
 ### The pipeline architecture
-* The tabular dataset is created using TabularDatasetFactory from the the [link](I'm an inline-style link](https://www.google.com)
+* The tabular dataset is created using TabularDatasetFactory from the the [link](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv)
 * The dataset is cleaned using python script. cleaning includes encoding categorical values, representing some non numeric values into numeric format 
 * The data is splitted into test and train set. the test:train ration is 20:80
 * The data is used to train LogisticRegression from sklearn.linear_model. SKLearn estimator from azureml.train.sklearn is used to run the trainnig script
