@@ -22,10 +22,10 @@ The same dataset was also used to train Logistic regression model and Parameters
 * The model LogisticRegression takes two hyperparameters inverse of regularization strength (--C) and Max iterations (--max_iter), Using Azure Hyper Drive these paremeters are tuned to get model with best accuracy.
 
 Screenshot shows HyperDrive Model accuracy in descending order after Run completion: 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/hyperdrive_child_run_completed.png "hyerdrive run completed")
+![run completedd](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/hyperdrive_child_run_completed.png "hyerdrive run completed")
 
 Screenshot shows HyperDrive best model run : 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/hyperdrive_best_model.png "hyerdrive best model run completed")
+![completed](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/hyperdrive_best_model.png "hyerdrive best model run completed")
 
 
 
@@ -61,7 +61,7 @@ I opted Random sampling method.
    * experiment_timeout_minutes : i specified 30 minutes which means maximum amount of time that all iterations combined can take before the experiment terminates.
    
 Screenshot shows AutoML configuration code from notebook: 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/automl_config.PNG "automl configuration")
+![automl config](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/automl_config.PNG "automl configuration")
 
 
 
@@ -70,22 +70,22 @@ Screenshot shows AutoML configuration code from notebook:
 * VotingEnsemble is an ensemble machine learning model that combines the predictions from multiple models resulting in performance improvement than any single ML models, The VotingEnsamble model trained by Azure AutoML combines models like LigthGBM, XGBoostClassifier, SGD, RandomForest. The VotingEnsemble uses ensemble weight to ensure that better algorithms contribute more to the overall result.
 
 
-Screenshot below shows the best run tags which was VotingEnsamble, you can view the algorithms name and their corrisponding weights and iterations: 
+Screenshot below shows the best run (VotingEnsamble) tags, you can view the algorithm names and their corresponding weights and iterations: 
 ![votingensamble detail](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/votingensamble_detail.png "votingensamble detail")
 
 
-Screenshot different model trained by AutoML with accuray : 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/all_automl_models.png "automl best models")
+Screenshot shows different model trained by AutoML with accuray : 
+![automl best models](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/all_automl_models.png "automl best models")
 
 Screenshot shows Best AutoML model run detail: 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/best_automl_model.png "automl best model")
+![automl run detail](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/best_automl_model.png "automl best model")
 
 
 * From the trained model explanation we can understand what features are having greater impact on decision making, from the screenshot below we can see that employment variation rate, month, number of employees , duration, pdays etc has higher importance in prediction
 
 
 Screenshot taken from AutoML model explanation showing some important features: 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/automl_explanation_global_importance.png "automl global importance")
+![importance](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/automl_explanation_global_importance.png "automl global importance")
 
 
 ## Pipeline comparison
@@ -95,18 +95,19 @@ Screenshot taken from AutoML model explanation showing some important features:
 * Though the difference of the accuracy for model trained with AutoML and HyperDrive was not significant, Azure AutoML made it easy to train multiple models in a short time, with hyperdrive it would have required to create different pipeline for different models. 
 
 Screenshot shows AutoML and Hyperdrive run completed: 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/all_runs_exp_completed.png "completed")
+![hyperdrive runs](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/all_runs_exp_completed.png "completed")
 
 
 ## Future work
 
-I cleaned data to train AutoML models, i would like to see if AutoML perform better than the current model when featurization it set to true. and another importnant point is that the dataset is imbalanced so i would like to train AutoML and HyperDrive models using F1-score or AUC, hopefully it will give more accurate and less bias result.
+* I cleaned data to train AutoML models, i would like to see if AutoML performs better than the current model and can handle the unprocessed data when featurization it set to true.
+* Another importnant point is that the dataset is imbalanced, so it would be better to train AutoML and HyperDrive models using F1-score or AUC, hopefully it will give more accurate and less bias result.
 
 
 ## Proof of cluster clean up
 The image shows cluster getting deleted
 
 Screenshot showing cluster getting deleted: 
-![alt text](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/deleting_cluster.png "cluster deleted")
+![deleted](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/deleting_cluster.png "cluster deleted")
 
 
