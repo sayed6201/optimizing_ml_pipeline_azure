@@ -65,7 +65,13 @@ Screenshot shows AutoML configuration code from notebook:
 
 
 
-* Both AutoML and HyperDrive was configured with same dataset and same primary metric. AutoML was able to train model having the best accuracy. the screenshot below shows models with best accuracy in descending order. VotingEnsemble model outperformed all other models, scoring accuracy of 91.58 %.
+* Both AutoML and HyperDrive was configured with same dataset and same primary metric. AutoML was able to train model having the best accuracy. the screenshot below shows models with best accuracy in descending order. VotingEnsemble model outperformed all other models, scoring accuracy of 91.58 %. 
+
+* VotingEnsemble is an ensemble machine learning model that combines the predictions from multiple models resulting in performance improvement than any single ML models, The VotingEnsamble model trained by Azure AutoML combines models like LigthGBM, XGBoostClassifier, SGD, RandomForest. The VotingEnsemble uses ensemble weight to ensure that better algorithms contribute more to the overall result.
+
+
+Screenshot below shows the best run tags which was VotingEnsamble, you can view the algorithms name and their corrisponding weights and iterations: 
+![votingensamble detail](https://github.com/sayed6201/optimizing_ml_pipeline_azure/blob/master/screenshots/votingensamble_detail.png "votingensamble detail")
 
 
 Screenshot different model trained by AutoML with accuray : 
