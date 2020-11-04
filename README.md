@@ -100,7 +100,7 @@ Screenshot shows AutoML and Hyperdrive run completed:
 
 ## Future work
 
-* I cleaned data to train AutoML models, i would like to see if AutoML performs better than the current model and can handle the unprocessed data when featurization it set to true.
+* I cleaned data to train AutoML models, i would like to see if AutoML performs better than the current model and can handle the unprocessed data when featurization is set to true.
 * Another importnant point is that the dataset is imbalanced, so it would be better to train AutoML and HyperDrive models using F1-score or AUC, hopefully it will give more accurate and less bias result.
 
 
